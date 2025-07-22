@@ -9,7 +9,7 @@
     // Events when window is scrolled
     $(window).on('scroll', function () {
         // site_header
-        if ($(this).scrollTop() >= 100) {
+        if ($(this).scrollTop() >= 0) {
             $('.site_header').addClass('menu_sticky');
         } else {
             $('.site_header').removeClass('menu_sticky');
@@ -18,14 +18,6 @@
 
     // Events when document is ready
     $(document).ready(function () {
-
-        // toggled_menu_icon
-        $(window).on('scroll', function () {
-            var winScroll = $(window).scrollTop();
-            var height = $(document).height() - $(window).height();
-            var scrolled = (winScroll / height) * 100;
-            $('#myBar').css('width', scrolled + '%');
-        });
 
         // image_slider
         $('.image_slider').owlCarousel({
@@ -83,6 +75,26 @@
         });
 
 
+        jQuery(document).ready(function ($) {
+            // Your code in here
+            const cursorDot = $(".cursor-dot");
+            const cursor = $(".cursor");
+            const link = $("a");
+
+            $(document).on("mousemove", (e) => {
+                const x = e.clientX;
+                const y = e.clientY;
+                cursorDot.css("transform", `translate(${x}px, ${y}px)`);
+            });
+
+            link.on("mouseenter", () => {
+                cursor.addClass("hovered");
+            });
+
+            link.on("mouseleave", () => {
+                cursor.removeClass("hovered");
+            });
+        });
 
     });
 
