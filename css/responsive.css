@@ -1,7 +1,10 @@
-/* ------ Medium and large devices (laptops and dekstops , 1480px and up) -----*/
-@media (min-width: 1480px) {
+/* ------ Medium and large devices (laptops and dekstops , 1024px and up) -----*/
+@media (min-width: 1024px) {
+  html {
+    font-size: 0.658vw;
+  }
   .container {
-    max-width: 1434px;
+    max-width: 143.4rem;
   }
 }
 
@@ -18,13 +21,6 @@
 
 /* ------ Medium and large devices (laptops and dekstops , 1479.98px and 1024px) -----*/
 @media (min-width: 1024px) and (max-width: 1479.98px) {
-  html {
-    font-size: 0.658vw;
-  }
-  .container {
-    max-width: 143.4rem;
-  }
-
   .sliderModal .modal-dialog {
     max-width: 70rem;
   }
@@ -297,7 +293,8 @@
     border-bottom: 0.1rem solid #fff;
   }
 
-  .site_header a.active, .site_header a:hover {
+  .site_header a.active,
+  .site_header a:hover {
     color: #ffffff !important;
     opacity: 0.75;
   }

@@ -606,11 +606,11 @@ h6 {
 }
 
 .cursor.hovered {
-  top: -3rem;
-  left: -3rem;
+  top: -1.2rem;
+  left: -1.2rem;
 }
 .cursor.hovered .cursor-dot {
-  width: 5rem;
-  height: 5rem;
+  width: 2.4rem;
+  height: 2.4rem;
   opacity: 0.5;
 }
